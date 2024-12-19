@@ -1,0 +1,37 @@
+<view class="new_word_book_container">
+    <view class="new_word_book_title">
+        <view class="left-title">生词列表</view>
+        <view wx:if="{{!isAllShow}}" class="right-btn-wrapper" bindtap="handleAllExplain">
+            <view class="eyes-img"></view>
+            <view class="eyes-desc">显示释义</view>
+        </view>
+        <view wx:else class="right-btn-wrapper" bindtap="handleAllExplain">
+            <view class="eyes-close-img"></view>
+            <view class="eyes-desc">隐藏释义</view>
+        </view>
+    </view>
+    <view class="new-word-list-wrapper">
+        <block wx:for="{{newWordList}}" wx:key="id">
+            <view class="new-word-item">
+                <view class="left-box">
+                    <view>{{item.word}}</view>
+                    <view>{{item.phonetic}}</view>
+                </view>
+                <view class="right-box">
+                    <view wx:if="{{!item.isShow}}" class="overlay-div" bindtap="handleOpenExplain" data-item="{{item}}">
+                        <image src="http://8.130.36.192/wxapp/newWord_eyes.svg"/>
+                    </view>
+                    <view class="word-desc-wrapper" bindtap="handleOpenExplain" data-item="{{item}}">
+                        <block wx:for="{{item.wordDescList}}" wx:key="index">
+                            <view class="word-desc-item">
+                                <view class="word-desc-title">{{item.key}}</view>
+                                <view class="word-desc-content">{{item.desc}}</view>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+                <!-- bindtap="toggleSelect" data-item="{{item}}" -->
+            </view>
+        </block>
+    </view>
+</view>

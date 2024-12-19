@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "share-one": "./components/shareOne/index",
+    "share-two": "./components/shareTwo/index"
+  }
+}

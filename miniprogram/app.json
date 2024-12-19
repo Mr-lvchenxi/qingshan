@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/studyPage/index",
+    "pages/dataPage/index",
+    "pages/minePage/index",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/search/index",
+    "pages/selectBook/index",
+    "pages/newWordBook/index",
+    "pages/selectStudyList/index",
+    "pages/wordStudy/index",
+    "pages/review/index",
+    "pages/reviewResult/index",
+    "pages/test/index",
+    "pages/testResult/index",
+    "pages/brush/index",
+    "pages/brushResult/index",
+    "pages/study/index",
+    "pages/studyCenter/index",
+    "pages/studyResult/index"
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#999",
+    "selectedColor": "#ff0000",
+    "list": [
+      {
+        "pagePath": "pages/studyPage/index",
+        "text": "学习"
+      },
+      {
+        "pagePath": "pages/dataPage/index",
+        "text": "数据"
+      },
+      {
+        "pagePath": "pages/minePage/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
+  },
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.1",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

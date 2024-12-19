@@ -1,0 +1,45 @@
+<view class="review-container">
+    <!-- <view class="title-wrapper">
+      <view class="left-box">
+          <view class="title">List2</view>
+          <image src="http://8.130.36.192/wxapp/biao.svg" />
+          <view class="time">45’57”</view>
+      </view>
+  </view> -->
+    <view class="test-all-wrapper">
+        <view class="btn-wrapper">
+            <view class="box left {{currentType === 1 && 'left-active'}}" bindtap="handleClickBtn" data-type="1">
+                <view>认识</view>
+                <view>45词</view>
+            </view>
+            <view class="box center {{currentType === 2 && 'center-active'}}" bindtap="handleClickBtn" data-type="2">
+                <view>不认识</view>
+                <view>12词</view>
+            </view>
+            <view class="box right {{currentType === 3 && 'right-active'}}" bindtap="handleClickBtn" data-type="3">
+                <view>错误</view>
+                <view>3词</view>
+            </view>
+        </view>
+        <view wx:if="{{currentType === 1}}" class="desc">认识单词列表</view>
+        <view wx:if="{{currentType === 2}}" class="desc">不认识单词列表</view>
+        <view wx:if="{{currentType === 3}}" class="desc">错误单词列表</view>
+        <block wx:for="{{wordList}}">
+                    <view class="word-wrapper">
+            <view class="title-wrapper">
+                <view class="left-wrapper">
+                    <view class="word">{{item.word}}</view>
+                    <view class="word-desc">{{item.wordDesc}}</view>
+                </view>
+                <image wx:if="{{item.isStar}}" src="http://8.130.36.192/wxapp/yesStar.svg" />
+                <image wx:else src="http://8.130.36.192/wxapp/noStar.svg" />
+            </view>
+            <view class="big-desc">{{item.bigDesc}}</view>
+            <view class="line"></view>
+        </view>
+        </block>
+    </view>
+    <view class="bottom_btn_wrapper">
+        <view class="bottom_btn" bindtap="handleGoBack">退出</view>
+    </view>
+</view>

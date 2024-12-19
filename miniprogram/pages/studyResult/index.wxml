@@ -1,0 +1,30 @@
+<view class="container-one">
+    <view class="title-wrapper" style="top:{{navBarHeight}}px">
+        <image src="http://8.130.36.192/wxapp/back.svg" bindtap="handleGoBack" />
+        学习总结
+    </view>
+    <view class="bg-wrapper">
+        <view class="top-wrapper">
+            <view class="title">List 1 已完成第2轮复习</view>
+            <view class="box-wrapper">
+                <view class="left-box">
+                    <view class="desc">455</view>
+                    <view class="bottom-desc">
+                        <image src="http://8.130.36.192/wxapp/a.svg" />
+                        <view>本次共计背词数</view>
+                    </view>
+                </view>
+                <view class="right-box">
+                    <view class="desc">45’59”</view>
+                    <view class="bottom-desc">
+                        <image src="http://8.130.36.192/wxapp/biao.svg" />
+                        <view>本次背词时长</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="desc-text">把你的进步跟好友分享一下吧！</view>
+        <cx-sharePoster></cx-sharePoster>
+        <view class="go-one" bindtap="handleGoOne">跳过</view>
+    </view>
+</view>

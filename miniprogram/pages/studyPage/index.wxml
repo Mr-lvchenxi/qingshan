@@ -1,0 +1,78 @@
+<view class="container-one">
+  <view class="search-wrapper" style="top:{{navBarHeight}}px" bindtap="navigateToSearchPage">
+    <image class="search-icon" src="http://8.130.36.192/wxapp/study_search.svg" />
+    <text class="search-tips">暗提示文案</text>
+  </view>
+  <view class="center-container">
+    <view class="select-book-wrapper">
+      <!-- <view class="no-select-book-btn-wrapper" bindtap="handleGoSelectBook">
+        <text>未选择词书</text>
+        <image src="http://8.130.36.192/wxapp/study_change.svg" />
+      </view> -->
+      <view class="select-book-btn-wrapper" bindtap="handleGoSelectBook">
+        <image class="current-book-img" src="https://img3.doubanio.com/view/subject/l/public/s3365739.jpg" />
+        <text>雅思托福</text>
+        <image class="small-icon" src="http://8.130.36.192/wxapp/study_change.svg" />
+      </view>
+      <view class="process-wrapper">
+        <cx-sharePosterOne></cx-sharePosterOne>
+        <view class="process-big">
+          <mpProgress config="{{config}}" percentage="{{studyMsg.percentage}}"></mpProgress>
+          <view class="process-desc-wrapper">
+            <view class="round-title">Round</view>
+            <view class="round-desc">{{studyMsg.round}}</view>
+            <view class="line"></view>
+            <view class="process-num">
+              <text>{{studyMsg.learnedWordCount}}</text>
+              <text>/{{studyMsg.totalWordCount}}</text>
+            </view>
+            <view class="word-process">单词进度</view>
+          </view>
+        </view>
+        <view class="process-desc">
+          <view class="left-wrapper">
+            <text class="text-desc">List进度</text>
+            <text class="text-a">12</text><text class="text-b">/23</text>
+          </view>
+          <view class="right-wrapper">
+            <text>总学习时间</text>
+            <text>{{studyMsg.duration}}</text>
+          </view>
+        </view>
+        <view class="study-btn" bindtap="handleGoStudyList">
+          <text>开始学习</text>
+          <image src="http://8.130.36.192/wxapp/study_right_light.svg" />
+        </view>
+      </view>
+    </view>
+    <view class="result-title-wrapper">
+      <view class="result-title">
+        <image class="share-btn" src="http://8.130.36.192/wxapp/study_result.svg" />
+        <text>今日小结</text>
+      </view>
+      <cx-sharePosterTwo></cx-sharePosterTwo>
+    </view>
+    <view class="result-desc-wrapper">
+      <view class="desc-wrapper first-wrapper">
+        <view>{{studyMsg.wordsCountToday}}</view>
+        <view>单词数</view>          
+      </view>
+      <view class="line"></view>
+      <view class="desc-wrapper second-wrapper">
+        <view class="num">
+          <view>{{studyMsg.consecutiveDays}}</view>
+          <view>天</view>
+        </view>
+        <view>连续背词</view>          
+      </view>
+      <view class="line"></view>
+      <view class="desc-wrapper third-wrapper">
+        <view class="num">
+          <view>{{studyMsg.durationToday}}</view>
+          <view>m</view>
+        </view>
+        <view>学习时长</view>          
+      </view>
+    </view>
+  </view>
+</view>

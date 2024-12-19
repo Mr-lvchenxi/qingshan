@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-slider": "@vant/weapp/slider/index"
+  },
+  "navigationStyle": "default",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "单词学习"
+}

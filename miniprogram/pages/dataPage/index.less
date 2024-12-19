@@ -1,0 +1,527 @@
+.container-one {
+  position: relative;
+
+  .title-wrapper {
+    position: absolute;
+    left: 40rpx;
+    height: 44rpx;
+    font-family: PingFangSC, PingFang SC;
+    font-weight: 500;
+    font-size: 32rpx;
+    color: #242A36;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    font-style: normal;
+  }
+}
+
+.bg-wrapper {
+  width: 670rpx;
+  padding: 8rpx 8rpx 38rpx;
+  box-sizing: border-box;
+  border-radius: 32rpx;
+  background: #F1F7F7;
+  margin: 32rpx auto 0;
+}
+
+.calendar {
+  overflow: hidden;
+  padding-top: 50rpx;
+  padding-bottom: 40rpx;
+  box-sizing: border-box;
+
+  background: #fff;
+  border-radius: 32rpx;
+}
+
+.header {
+  padding: 0 16rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 52rpx;
+
+  view {
+    height: 48rpx;
+    font-family: 'DingTalkJinBuTi';
+    font-weight: normal;
+    font-size: 40rpx;
+    color: #163B3F;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  image {
+    width: 40rpx;
+    height: 40rpx;
+    display: block;
+  }
+}
+
+.weekdays {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 56rpx;
+
+  view {
+    height: 34rpx;
+    font-family: PingFangSC, PingFang SC;
+    font-weight: 500;
+    font-size: 24rpx;
+    color: #8A9C9F;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40rpx;
+  }
+}
+
+.dates {
+  padding: 0 0 0 37rpx;
+  box-sizing: border-box;
+  // display: grid;
+  // grid-template-columns: repeat(7, 1fr);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .day {
+    width: 52rpx;
+    height: 52rpx;
+    border-radius: 26rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: 30rpx;
+    margin-bottom: 36rpx;
+  }
+
+  // .day:nth-child(7n) {
+  //   margin-right: 0;
+  // }
+  .invalid {
+    font-family: PingFangSC, PingFang SC;
+    font-weight: 500;
+    font-size: 26rpx;
+    color: #8A9C9F !important;
+    text-align: right;
+    font-style: normal;
+  }
+
+  .unstudied {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2rpx dashed rgba(151, 151, 151, 0.5);
+    font-family: PingFangSC, PingFang SC;
+    font-weight: 500;
+    font-size: 26rpx;
+    color: #163B3F !important;
+    font-style: normal;
+  }
+
+  .lessThan100 {
+    background: #9CF7AE;
+    font-family: PingFangSC, PingFang SC;
+    font-weight: 500;
+    font-size: 26rpx;
+    color: #163B3F !important;
+    font-style: normal;
+  }
+
+  .moreThan100 {
+    background: #00CE99;
+    font-family: PingFangSC, PingFang SC;
+    font-weight: 500;
+    font-size: 26rpx;
+    color: #FFFFFF !important;
+    font-style: normal;
+  }
+
+  .notTime {
+    font-family: PingFangSC, PingFang SC;
+    font-weight: 500;
+    font-size: 26rpx;
+    color: #163B3F !important;
+    font-style: normal;
+  }
+
+  .current-day-icon {
+    position: absolute;
+    width: 64rpx;
+    height: 64rpx;
+    border-radius: 32rpx;
+    border: 2rpx solid #00B0A5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.tips-wrapper {
+  padding-top: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .one-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    view:first-child {
+      width: 20rpx;
+      height: 20rpx;
+      border-radius: 10rpx;
+      border: 2rpx solid rgba(151, 151, 151, 0.5);
+      margin-right: 16rpx;
+    }
+
+    view:last-child {
+      height: 34rpx;
+      font-family: PingFangSC, PingFang SC;
+      font-weight: 400;
+      font-size: 24rpx;
+      color: #516C6F;
+      text-align: left;
+      font-style: normal;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .two-wrapper {
+    margin: 0 32rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    view:first-child {
+      width: 20rpx;
+      height: 20rpx;
+      background: #9CF7AE;
+      border-radius: 10rpx;
+      margin-right: 16rpx;
+    }
+
+    view:last-child {
+      height: 34rpx;
+      font-family: PingFangSC, PingFang SC;
+      font-weight: 400;
+      font-size: 24rpx;
+      color: #516C6F;
+      text-align: left;
+      font-style: normal;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .three-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    view:first-child {
+      width: 20rpx;
+      height: 20rpx;
+      background: #00CE99;
+      border-radius: 10rpx;
+      margin-right: 16rpx;
+    }
+
+    view:last-child {
+      height: 34rpx;
+      font-family: PingFangSC, PingFang SC;
+      font-weight: 400;
+      font-size: 24rpx;
+      color: #516C6F;
+      text-align: left;
+      font-style: normal;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24rpx 0 40rpx;
+  width: 100%;
+  position: relative;
+
+  .left-box {
+    width: 48rpx;
+    height: 48rpx;
+    border-radius: 24rpx;
+    background-color: #F1F7F7;
+    position: absolute;
+    left: -26rpx;
+  }
+
+  .right-box {
+    position: absolute;
+    right: -26rpx;
+    width: 48rpx;
+    height: 48rpx;
+    border-radius: 24rpx;
+    background-color: #F1F7F7;
+  }
+
+  .center-line {
+    width: 574rpx;
+    border: 2rpx dashed #D0D8D9;
+  }
+}
+
+.date-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32rpx 0 36rpx;
+  box-sizing: border-box;
+  margin-bottom: 28rpx;
+
+  view {
+    height: 40rpx;
+    font-family: PingFangSC, PingFang SC;
+    font-weight: 500;
+    font-size: 28rpx;
+    color: #163B3F;
+    text-align: left;
+    font-style: normal;
+  }
+
+  // image {
+  //   width: 40rpx;
+  //   height: 40rpx;
+  //   display: block;
+  // }
+}
+
+.date-statistics-wrapper {
+  padding-left: 36rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .common-wrapper {
+    margin-right: 94rpx;
+
+    view:first-child {
+      height: 34rpx;
+      font-family: 'DINExp';
+      font-weight: bold;
+      font-size: 30rpx;
+      color: #163B3F;
+      text-align: left;
+      font-style: normal;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 8rpx;
+    }
+
+    view:last-child {
+      height: 34rpx;
+      font-family: PingFangSC, PingFang SC;
+      font-weight: 400;
+      font-size: 24rpx;
+      color: #516C6F;
+      text-align: left;
+      font-style: normal;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  .common-wrapper:last-child {
+    margin-right: 0;
+  }
+
+  .new-common {
+    view:first-child {
+      text:first-child {
+        height: 34rpx;
+        font-family: 'DINExp';
+        font-weight: bold;
+        font-size: 30rpx;
+        color: #163B3F;
+        line-height: 34rpx;
+        text-align: left;
+        font-style: normal;
+        margin-right: 4rpx;
+      }
+
+      text:last-child {
+        height: 34rpx;
+        font-family: PingFangSC, PingFang SC;
+        font-weight: 400;
+        font-size: 24rpx;
+        color: #516C6F;
+        line-height: 34rpx;
+        text-align: left;
+        font-style: normal;
+      }
+    }
+  }
+}
+
+.result-title-wrapper {
+  margin-bottom: 28rpx;
+  box-sizing: border-box;
+  padding: 40rpx 40rpx 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .result-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    image {
+      width: 40rpx;
+      height: 40rpx;
+      display: block;
+      margin-right: 8rpx;
+    }
+
+    text {
+      height: 38rpx;
+      font-family: 'DingTalkJinBuTi';
+      // font-weight: normal;
+      font-size: 32rpx;
+      color: #163B3F;
+      line-height: 38rpx;
+      // text-align: left;
+      // font-style: normal;
+    }
+  }
+
+  .share-btn {
+    width: 40rpx;
+    height: 40rpx;
+    display: block;
+  }
+}
+.date-all-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .line {
+    width: 2rpx;
+    height: 108rpx;
+    background: #D0D8D9;
+  }
+  .left-box {
+    flex: 1;
+    padding-left: 40rpx;
+    box-sizing: border-box;
+    view:first-child {
+      height: 70rpx;
+      font-family: 'DINExp';
+      font-weight: bold;
+      font-size: 64rpx;
+      color: #163B3F;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
+      font-style: normal;
+      margin-bottom: 2rpx;
+    }
+    view:last-child {
+      height: 34rpx;
+      font-family: PingFangSC, PingFang SC;
+      font-weight: 400;
+      font-size: 24rpx;
+      color: #516C6F;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
+      font-style: normal;
+    }
+  }
+  .right-box {
+    flex: 1;
+    padding-left: 40rpx;
+    box-sizing: border-box;
+    view:first-child {
+      margin-bottom: 2rpx;
+      text:first-child {
+        height: 70rpx;
+        font-family: D-DINExp, D-DINExp;
+        font-weight: bold;
+        font-size: 64rpx;
+        color: #163B3F;
+        line-height: 70rpx;
+        text-align: center;
+        font-style: normal;
+        margin-right: 8rpx;
+      }
+      text:last-child {
+        height: 34rpx;
+        font-family: PingFangSC, PingFang SC;
+        font-weight: 400;
+        font-size: 24rpx;
+        color: #516C6F;
+        line-height: 34rpx;
+        text-align: left;
+        font-style: normal;
+      }
+    }
+    view:last-child {
+      height: 34rpx;
+      font-family: PingFangSC, PingFang SC;
+      font-weight: 400;
+      font-size: 24rpx;
+      color: #516C6F;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
+      font-style: normal;
+    }
+  }
+}
+
+
+.canvas-one {
+  width: 654rpx;
+  height: 904rpx;
+  background: url('https://m.xiwang.com/resource/HAbejYmV62n7tzG97Wym5-1725291588618.png') pink no-repeat;
+  background-size: 654rpx 904rpx;
+  .title {
+    width: 100%;
+    height: 102rpx;
+    background:#9CF7AE;
+    border-radius: 40rpx 40rpx 0 0;
+    font-family: 'DingTalkJinBuTi';
+    font-weight: normal;
+    font-size: 40rpx;
+    color: #163B3F;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

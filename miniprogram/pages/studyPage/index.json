@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "mpProgress": "./components/cx-process/index",
+    "cx-sharePosterOne": "./components/shareOne/index",
+    "cx-sharePosterTwo": "./components/shareTwo/index"
+  }
+}

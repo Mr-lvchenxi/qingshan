@@ -1,0 +1,1 @@
+<view class="share-btn" bindtap="handleShare">分享</view>

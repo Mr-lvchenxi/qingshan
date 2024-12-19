@@ -1,0 +1,50 @@
+<view class="select-study-list-container">
+    <van-action-sheet show="{{ show }}" bind:click-overlay="handleCloseAction">
+        <view bindtap="handleGoStudy">学习</view>
+        <view bindtap="handleGoReview">复习</view>
+        <view bindtap="handleGoTest">测试</view>
+        </van-action-sheet>
+    <view class="title-wrapper">
+        <!-- <view bindtap="tapname">点击模拟数据</view> -->
+        <!-- <view bindtap="tapname2">点击模拟数据2</view> -->
+        <view class="left-box">请选择LIST进行学习</view>
+        <view wx:if="{{!isClickAllSelect}}" class="right-box" bindtap="handleClickAllSelect">
+            <image src="http://8.130.36.192/wxapp/select_study_list_all_select.svg" />
+            <view>多选</view>
+        </view>
+        <view wx:else class="right-box" bindtap="handleClickNoAllSelect">
+            <view>取消</view>
+        </view>
+    </view>
+    <view class="study-list-wrapper">
+        <block wx:for="{{studyList}}" wx:key="id">
+            <view class="study-item" bindtap="handleClickItem" data-item="{{item}}">
+                <view class="select-and-name">
+                    <view wx:if="{{isClickAllSelect && !item.isSelected}}" class="no-select" bindtap="toggleSelect" data-item="{{item}}"></view>
+                    <image wx:if="{{isClickAllSelect && item.isSelected}}" class="" src="http://8.130.36.192/wxapp/select_study_list_select.svg" bindtap="toggleSelect" data-item="{{item}}" />
+                    <view class="study-name">{{item.listName}}</view>
+                </view>
+                <view class="right-box">
+                    <view class="process-box">
+                        <text class="text-desc">进度</text>
+                        <text class="current-text">{{item.currentProcess}}</text>
+                        <text class="all-text">/20</text>
+                    </view>
+                    <view class="num-box">
+                        <text class="text-desc">轮次</text>
+                        <text class="text-num">{{item.num}}</text>
+                    </view>
+                    <image wx:if="{{!isClickAllSelect}}" src="http://8.130.36.192/wxapp/select_study_list_right.svg" />
+                </view>
+            </view>
+        </block>
+    </view>
+    <view wx:if="{{isClickAllSelect && !hasSelected}}" class="no-bottom-btn">
+        <view class="btn-text">去刷词</view>
+        <view class="small-icon"></view>
+    </view>
+    <view wx:if="{{isClickAllSelect && hasSelected}}" class="bottom-btn" bindtap="confirmSelection">
+        <view class="btn-text">去刷词</view>
+        <view class="small-icon"></view>
+    </view>
+</view>

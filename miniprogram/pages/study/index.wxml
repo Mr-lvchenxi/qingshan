@@ -1,0 +1,59 @@
+<view class="review-container">
+    <view class="title-wrapper">
+        <view class="left-box">
+            <view class="title">List2</view>
+            <image src="http://8.130.36.192/wxapp/biao.svg" />
+            <view class="time">45’57”</view>
+        </view>
+        <view class="right-box">
+            <view>回忆模式</view>
+            <!-- <view>普通模式</view> -->
+            <image src="http://8.130.36.192/wxapp/change.svg" />
+        </view>
+    </view>
+    <view class="word-item-wrapper">
+        <view class="process-wrapper">
+            <view>2</view>
+            <view>/20</view>
+        </view>
+        <view class="small-icon">新词</view>
+        <view class="word">content</view>
+        <view class="audio-wrapper">
+            <view class="audio-item">
+                <view>英/'kɑntɛnt/</view>
+                <image src="http://8.130.36.192/wxapp/play.svg" />
+            </view>
+            <view class="audio-item">
+                <view>美/'kɑntɛnt/</view>
+                <image src="http://8.130.36.192/wxapp/play.svg" />
+            </view>
+        </view>
+        <view class="flag-wrapper">
+            <image class="" src="http://8.130.36.192/wxapp/flag.svg" />
+              <view>
+                单词标记
+              </view>
+                
+        </view>
+        <view class="slide-container">
+            <image class="label" src="https://m.xiwang.com/resource/aHDHSrjopTJ_5VAUYnkYk-1727406906687.png"/>
+              
+            <view class="slide-wrapper">
+                <view class="slide-item-wrapper">
+                    <block wx:for="{{currentList}}" wx:key="*this">
+                        <view class="slide-item" style="background-color: {{item}}"></view>
+                    </block>
+                </view>
+                  
+                <van-slider bar-height="10px" value="{{currentStep}}" bind:drag="onDragStep" bind:change="onChangeStep" step="10" class="van-slider-custom"/>
+            </view>
+            <image class="label" src="https://m.xiwang.com/resource/QLnWSZ7hV4mzV7VcQZuvA-1727406906687.png"/>
+        </view>
+        <view class="line"></view>
+        <view class="no-text">待接口联调后布局</view>
+    </view>
+    <view class="bottom_btn_wrapper">
+        <view class="bottom_btn" bindtap="handleClickBtn" data-type="up">上一个</view>
+        <view class="bottom_btn" bindtap="handleClickBtn" data-type="down">下一个</view>
+    </view>
+</view>

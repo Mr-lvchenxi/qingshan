@@ -1,0 +1,60 @@
+<view class="review-container">
+    <van-action-sheet show="{{ show }}" bind:click-overlay="handleCloseAction">
+        <block wx:for="{{timeList}}" wx:key="id">
+            <view class="time-btn {{item.id === currentTime && 'active'}}" bindtap="handleSelectTime" data-id="{{item.id}}">
+                {{item.time}}
+                <image wx:if="{{item.id === currentTime}}" src="http://8.130.36.192/wxapp/yes.svg" />
+            </view>
+        </block>
+    </van-action-sheet>
+    <view class="title-wrapper">
+        <view class="left-box">
+            <view class="title">List2</view>
+            <image src="http://8.130.36.192/wxapp/biao.svg" />
+            <view class="time">45’57”</view>
+        </view>
+        <view class="right-box" bindtap="handleChangeDesc">
+            <image src="http://8.130.36.192/wxapp/time.svg" />
+            <view>播放时长</view>
+        </view>
+    </view>
+    <view class="word-item-wrapper">
+        <view class="process-wrapper">
+            <view>2</view>
+            <view>/20</view>
+        </view>
+        <view class="word">content</view>
+        <view class="audio-wrapper">
+            <view class="audio-item">
+                <view>英/'kɑntɛnt/</view>
+                <image src="http://8.130.36.192/wxapp/play.svg" />
+            </view>
+        </view>
+        <view class="line"></view>
+        <!-- <view class="select-wrapper">
+            <view class="select-item select-item-no">
+                <view>n. 反对票，反对者；反对的论点，反对的理由；反对的论点，反对的</view>
+                <image src="http://8.130.36.192/wxapp/no.svg" />
+            </view>
+            <view class="select-item">
+                <view>adj. 劝告的，激励的</view>
+            </view>
+            <view class="select-item">
+                <view>adj. 满足的；</view>
+            </view>
+            <view class="select-item select-item-yes">
+                <image src="http://8.130.36.192/wxapp/yes.svg" />
+                <view>n. 反对票，反对者；反对的论点，反对的理由；反对的论点，反对的n. 反对票，反对者；反对的论点，反对的理由；反对的论点，反对的</view>
+            </view>
+        </view> -->
+        <view class="no-text">根据接口返回布局</view>
+    </view>
+    <view class="bottom_btn_wrapper">
+        <view class="bottom_btn" bindtap="handleClickBtn" data-type="up">上一个</view>
+        <view class="cricle-wrapper">
+            <van-circle value="30" stroke-width="4" layer-color="#DDFBDF" color="#00B0A5" text="" size="40" />
+            <image src="http://8.130.36.192/wxapp/smallPause.svg" />     
+        </view>
+        <view class="bottom_btn" bindtap="handleClickBtn" data-type="down">下一个</view>
+    </view>
+</view>

@@ -1,0 +1,302 @@
+.review-container {
+    .title-wrapper {
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 32rpx 32rpx 0;
+        height: 104rpx;
+        background-color: #fff;
+        box-sizing: border-box;
+
+        .left-box {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .title {
+                font-family: DingTalkJinBuTi;
+                font-weight: normal;
+                font-size: 40rpx;
+                color: #163B3F;
+                height: 48rpx;
+                text-align: left;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-style: normal;
+            }
+
+            image {
+                margin: 0 8rpx 0 16rpx;
+                width: 40rpx;
+                height: 40rpx;
+                display: block;
+            }
+
+            .time {
+                height: 32rpx;
+                font-family: DINExp;
+                font-weight: bold;
+                font-size: 28rpx;
+                color: #163B3F;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                text-align: left;
+                font-style: normal;
+            }
+        }
+
+        .right-box {
+            margin-top: 4rpx;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            image {
+                width: 40rpx;
+                height: 40rpx;
+                display: block;
+                margin-right: 8rpx;
+            }
+
+            view {
+                height: 40rpx;
+                font-family: PingFangSC, PingFang SC;
+                font-weight: 500;
+                font-size: 28rpx;
+                color: #00B0A5;
+                text-align: left;
+                font-style: normal;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    .word-item-wrapper {
+        box-sizing: border-box;
+        position: relative;
+        margin: 104rpx auto 0;
+        width: 686rpx;
+        background: #FFFFFF;
+        border-radius: 32rpx;
+        border: 10rpx solid #F1F7F7;
+        padding: 46rpx 22rpx 62rpx;
+
+        .process-wrapper {
+            background: url('http://8.130.36.192/wxapp/smallIcon.png') no-repeat;
+            background-size: 100% 100%;
+            // background: #F1F7F7;
+            padding: 0 40rpx;
+            height: 48rpx;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 0 0 10rpx 10rpx;
+
+            view:first-child {
+                height: 32rpx;
+                font-family: DINExp;
+                font-weight: bold;
+                font-size: 28rpx;
+                color: #163B3F;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 4rpx;
+                font-style: normal;
+            }
+
+            view:last-child {
+                color: #8A9C9F;
+                height: 32rpx;
+                font-family: DINExp;
+                font-weight: bold;
+                font-size: 28rpx;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-style: normal;
+            }
+        }
+
+        .word {
+            height: 70rpx;
+            font-family: DINExp;
+            font-weight: bold;
+            font-size: 64rpx;
+            color: #163B3F;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-style: normal;
+            margin-bottom: 24rpx;
+        }
+
+        .audio-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .audio-item {
+                padding: 12rpx 24rpx;
+                background: #F1F7F7;
+                border-radius: 32rpx;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                view {
+                    height: 34rpx;
+                    font-family: PingFangSC, PingFang SC;
+                    font-weight: 500;
+                    font-size: 24rpx;
+                    color: #516C6F;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    font-style: normal;
+                }
+
+                image {
+                    margin-left: 8rpx;
+                    width: 40rpx;
+                    height: 40rpx;
+                    display: block;
+                }
+            }
+        }
+
+        .line {
+            margin: 40rpx auto;
+            background: repeating-linear-gradient(to right, #D0D8D9, #D0D8D9 15rpx, transparent 15rpx, transparent 15px);
+            /* 创建一条虚线背景 */
+            height: 2rpx;
+            /* 设置元素的高度为1像素 */
+            width: 100%;
+            /* 设置元素的宽度为100% */
+        }
+
+        .select-wrapper {
+            margin-bottom: 20rpx;
+
+            .select-item {
+                width: 100%;
+                min-height: 124rpx;
+                background: #F1F7F7;
+                border-radius: 16rpx;
+                margin-bottom: 24rpx;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 20rpx 32rpx;
+                box-sizing: border-box;
+
+                view {
+                    width: 486rpx;
+                    font-family: PingFangSC, PingFang SC;
+                    font-weight: 500;
+                    font-size: 28rpx;
+                    color: #163B3F;
+                    line-height: 40rpx;
+                    text-align: left;
+                    font-style: normal;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
+            }
+
+            .select-item-no {
+                position: relative;
+                background-color: #FDE5E2;
+
+                image {
+                    position: absolute;
+                    right: 32rpx;
+                    width: 40rpx;
+                    height: 40rpx;
+                    display: block;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+
+            .select-item-yes {
+                position: relative;
+                background-color: #DDFBDF;
+
+                image {
+                    position: absolute;
+                    right: 32rpx;
+                    width: 40rpx;
+                    height: 40rpx;
+                    display: block;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+
+        .no-text {
+            // display: inline-block;
+            width: 104rpx;
+            // height: 60rpx;
+            // padding-top: 16rpx;
+            font-family: PingFangSC, PingFang SC;
+            font-weight: 500;
+            font-size: 28rpx;
+            color: #163B3F;
+            line-height: 60rpx;
+            text-align: center;
+            font-style: normal;
+            margin: 0 auto;
+            padding-top: 16rpx;
+            // border: 2rpx solid #ccc;
+            // border-radius: 15rpx;
+        }
+    }
+
+    .bottom_btn_wrapper {
+        position: fixed;
+        bottom: 90rpx;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .bottom_btn {
+            width: 328rpx;
+            height: 112rpx;
+            background: #00B0A5;
+            box-shadow: 0rpx 24rpx 32rpx -16rpx #A3CCC9;
+            border-radius: 56rpx;
+            margin-right: 30rpx;
+            font-family: PingFangSC, PingFang SC;
+            font-weight: 500;
+            font-size: 32rpx;
+            color: #FFFFFF;
+            font-style: normal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bottom_btn:last-child {
+            margin-right: 0;
+        }
+    }
+
+  }

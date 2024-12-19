@@ -1,0 +1,105 @@
+<view class="search-container">
+  <view class="search-wrapper">
+    <view class="search-input-wrapper">
+      <view class="left-wrapper">
+        <image src="http://8.130.36.192/wxapp/study_search.svg" />
+        <input type="text" placeholder="请输入要搜索的英文或中文"/>
+      </view>
+      <image class="right-clear" src="http://8.130.36.192/wxapp/search_clear.svg" />
+    </view>
+  </view>
+  <view class="list-wrapper">
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障时打开方式打开房间时的开孔发生的纠纷开始即可；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">consdf ksdfsdsdfsdfjf j</view>
+      <view class="desc">n.鼻子；vi.出故障xxxxx；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障；</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="main">con</view>
+      <view class="desc">n.鼻子；vi.出故障xxxxxxxxx；</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,1 @@
+<image class="shareImg" bindtap="handleShare" src="http://8.130.36.192/wxapp/study_share.svg" />

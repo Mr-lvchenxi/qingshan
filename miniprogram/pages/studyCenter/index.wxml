@@ -1,0 +1,28 @@
+<view class="review-container">
+    <view class="title-wrapper">
+        <view class="left-box">小结</view>
+        <view class="right-box" bindtap="handleChangeDesc">
+            <image wx:if="{{!currentIsOpen}}"class="" src="http://8.130.36.192/wxapp/yesEyes.svg" />
+            <image wx:else class="" src="http://8.130.36.192/wxapp/noEyes.svg" />
+            <view wx:if="{{!currentIsOpen}}">显示释义</view>
+            <view wx:else>隐藏释义</view>
+        </view>
+    </view>
+    <view class="word_list-wrapper">
+        <view class="word_item-wrapper" wx:for="{{wordList}}" wx:key="{{item.title}}">
+            <view wx:if="{{!item.isOpen}}" class="bg" bindtap="handleChangeBg" data-item="{{item}}">
+                <image src="http://8.130.36.192/wxapp/defaultYesEyes.svg" alt="" />
+            </view>
+            <view class="left-box">
+                <view class="word">{{item.title}}</view>
+                <view class="desc">{{item.smallDesc}}</view>
+            </view>
+            <view class="right-box" bindtap="handleChangeBg" data-item="{{item}}">
+                <view class="right-box-text">{{item.bigDesc}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="bottom_btn_wrapper">
+        <view class="bottom_btn" bindtap="handleClickBtn">继续</view>
+    </view>
+</view>

@@ -1,0 +1,24 @@
+<view class="select-book-container">
+  <view class="tab-wrapper">
+    <van-tabs active="{{ active }}" color="#00B0A5" bind:change="onChangeTabs">
+      <van-tab wx:for="{{tagsList}}" title="{{item}}" >
+        <view class="book-list-wrapper">
+          <block wx:for="{{bookList}}" wx:key="id">
+            <view class="book-item" bindtap="toggleSelect" data-item="{{item}}">
+              <image wx:if="{{item.isSelected}}" class="selected-img" src="http://8.130.36.192/wxapp/selectBook_selected.svg" />
+              <view wx:else class="no-selected"></view>
+              <image class="book-img" src="{{item.coverimage}}" />
+              <view class="book-title">{{item.title}}</view>
+              <view class="book-desc">{{item.description}}</view>
+              <view class="controls-desc">
+                共{{item.allBookNum}}词，{{item.currentBookNum}}/{{item.allBookNum}}
+              </view>
+            </view>
+          </block>
+        </view>
+      </van-tab>
+    </van-tabs>
+  </view>
+  <view wx:if="{{!hasSelected}}" class="no-bottom-btn">确认更改</view>
+  <view wx:else class="bottom-btn" bindtap="confirmSelection">确认更改</view>
+</view>

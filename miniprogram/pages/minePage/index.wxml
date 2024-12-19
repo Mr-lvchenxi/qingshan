@@ -1,0 +1,39 @@
+<view class="container-one">
+    <view class="title-wrapper" style="top:{{navBarHeight}}px">我的</view>
+    <view class="mine-set-wrapper">
+        <view class="left-head-img">
+            <image src="{{headImg}}" />
+        </view>
+        <view class="right-set-wrapper">
+            <image src="http://8.130.36.192/wxapp/mine_edit.svg" />
+            <image src="http://8.130.36.192/wxapp/mine_set.svg" />
+        </view>
+    </view>
+    <view class="mine-desc-wrapper">
+        <view class="mine-name-sex">
+            <view>{{userName}}</view>
+            <image wx:if="{{sex === 1}}" src="http://8.130.36.192/wxapp/mine_man.svg" />
+            <image wx:else src="http://8.130.36.192/wxapp/mine_woman.svg" />
+        </view>
+        <view class="mine-day">加入青山的第{{day}}天</view>
+    </view>
+    <view class="single-word-book-wrapper" bindtap="handleGoNewWordBook">
+        <view class="single-word-title-wrapper">
+            <view class="left-box">
+                <view class="star-view"></view>
+                <view class="star-desc">生词本</view>
+            </view>
+            <image class="right-img" src="http://8.130.36.192/wxapp/mine_right.svg" />
+        </view>
+        <view class="bottom-num-wrapper">
+            <view class="box left-box">
+                <view>{{wordNum}}</view>
+                <view>总生词量</view>
+            </view>
+            <view class="box right-box">
+                <view>{{todayWordNum}}</view>
+                <view>今日新增生词</view>
+            </view>
+        </view>
+    </view>
+</view>

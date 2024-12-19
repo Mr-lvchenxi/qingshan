@@ -1,0 +1,250 @@
+.container-one {
+    position: relative;
+
+    .title-wrapper {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        height: 60rpx;
+        font-family: PingFangSC, PingFang SC;
+        font-weight: 500;
+        font-size: 32rpx;
+        color: #242A36;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: right;
+        font-style: normal;
+        image {
+            width: 40rpx;
+            height: 40rpx;
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 20rpx;
+        }
+    }
+}
+
+.bg-wrapper {
+    padding-top: 64rpx;
+    width: 670rpx;
+    margin: 0 auto;
+    box-sizing: border-box;
+    .top-wrapper {
+        width: 670rpx;
+        height: 436rpx;
+        background: url('https://m.xiwang.com/resource/D3NAZUqTAYVUUh7j9K4Dp-1727321743724.png'), no-repeat;
+        background-size: 100% 100%;
+        box-shadow: 0px 4rpx 32rpx 0px rgba(231, 235, 235, 0.5);
+        border-radius: 40rpx;
+        margin-bottom: 112rpx;
+        padding-top: 64rpx;
+        box-sizing: border-box;
+
+        .title {
+            width: 100%;
+            text-align: center;
+            height: 58rpx;
+            font-family: DingTalkJinBuTi;
+            font-weight: normal;
+            font-size: 48rpx;
+            color: #163B3F;
+            font-style: normal;
+            margin-bottom: 64rpx;
+        }
+
+        .word-num-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40rpx;
+            view:first-child {
+                height: 70rpx;
+                font-family: DINExp;
+                font-weight: bold;
+                font-size: 64rpx;
+                color: #163B3F;
+                text-align: right;
+                font-style: normal;
+                margin-right: 8rpx;
+            }
+            view:last-child {
+                margin-top: 25rpx;
+                height: 34rpx;
+                font-family: PingFangSC, PingFang SC;
+                font-weight: 400;
+                font-size: 24rpx;
+                color: #8A9C9F;
+                text-align: left;
+                font-style: normal;
+            }
+        }
+        .time-all {
+            position: relative;
+            text-align: center;
+            view {
+                // margin: 0 auto;
+                display: inline-block;
+                padding: 12rpx 16rpx;
+                background: #FFF621;
+                border-radius: 16rpx;
+                font-family: PingFangSC, PingFang SC;
+                font-weight: 400;
+                font-size: 28rpx;
+                color: #163B3F;
+                text-align: center;
+                font-style: normal;
+            }
+            image {
+                width: 32rpx;
+                height: 16rpx;
+                display: block;
+                position: absolute;
+                top: -16rpx;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        // .box-wrapper {
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+
+        //     .left-box {
+        //         padding: 32rpx 0 0 32rpx;
+        //         box-sizing: border-box;
+        //         width: 280rpx;
+        //         height: 186rpx;
+        //         background: linear-gradient(90deg, #EFFFEC 0%, #FAFFDE 100%, #FCFFE9 100%);
+        //         border-radius: 20rpx;
+        //         border: 2rpx solid #00B0A5;
+        //         margin-right: 30rpx;
+        //         .desc {
+        //             height: 70rpx;
+        //             font-family: DINExp;
+        //             font-weight: bold;
+        //             font-size: 64rpx;
+        //             color: #163B3F;
+        //             display: flex;
+        //             justify-content: flex-start;
+        //             align-items: center;
+        //             font-style: normal;
+        //             margin-bottom: 16rpx;
+        //         }
+        //         .bottom-desc {
+        //             display: flex;
+        //             justify-content: flex-start;
+        //             align-items: center;
+        //             image {
+        //                 width: 40rpx;
+        //                 height: 40rpx;
+        //                 display: block;
+        //                 margin-right: 8rpx;
+        //             }
+        //             view {
+        //                 height: 34rpx;
+        //                 font-family: PingFangSC, PingFang SC;
+        //                 font-weight: 400;
+        //                 font-size: 24rpx;
+        //                 color: #8A9C9F;
+        //                 display: flex;
+        //                 justify-content: flex-start;
+        //                 align-items: center;
+        //                 text-align: left;
+        //                 font-style: normal;
+        //             }
+        //         }
+        //     }
+
+        //     .right-box {
+        //         padding: 32rpx 0 0 32rpx;
+        //         box-sizing: border-box;
+        //         width: 280rpx;
+        //         height: 186rpx;
+        //         background: linear-gradient(90deg, #E4FFFD 0%, #E9FDEA 100%);
+        //         border-radius: 20rpx;
+        //         border: 2rpx solid #00B0A5;
+        //         .desc {
+        //             height: 70rpx;
+        //             font-family: DINExp;
+        //             font-weight: bold;
+        //             font-size: 64rpx;
+        //             color: #163B3F;
+        //             display: flex;
+        //             justify-content: flex-start;
+        //             align-items: center;
+        //             font-style: normal;
+        //             margin-bottom: 16rpx;
+        //         }
+        //         .bottom-desc {
+        //             display: flex;
+        //             justify-content: flex-start;
+        //             align-items: center;
+        //             image {
+        //                 width: 40rpx;
+        //                 height: 40rpx;
+        //                 display: block;
+        //                 margin-right: 8rpx;
+        //             }
+        //             view {
+        //                 height: 34rpx;
+        //                 font-family: PingFangSC, PingFang SC;
+        //                 font-weight: 400;
+        //                 font-size: 24rpx;
+        //                 color: #8A9C9F;
+        //                 display: flex;
+        //                 justify-content: flex-start;
+        //                 align-items: center;
+        //                 text-align: left;
+        //                 font-style: normal;
+        //             }
+        //         }
+        //     }
+        // }
+    }
+
+    .desc-text {
+        margin: 0 auto 32rpx;
+        height: 40rpx;
+        font-family: PingFangSC, PingFang SC;
+        font-weight: 400;
+        font-size: 28rpx;
+        color: #163B3F;
+        text-align: center;
+        font-style: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // .share-btn {
+    //     width: 670rpx;
+    //     height: 112rpx;
+    //     background: #00B0A5;
+    //     box-shadow: 0px 24rpx 32rpx -16rpx #A3CCC9;
+    //     border-radius: 56rpx;
+    //     font-weight: 500;
+    //     font-size: 32rpx;
+    //     color: #FFFFFF;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    // }
+
+    .go-one {
+        padding: 48rpx 0;
+        height: 40rpx;
+        font-family: PingFangSC, PingFang SC;
+        font-weight: 500;
+        font-size: 28rpx;
+        color: #163B3F;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: left;
+        font-style: normal;
+    }
+}

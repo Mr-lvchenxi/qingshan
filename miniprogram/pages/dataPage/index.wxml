@@ -1,0 +1,88 @@
+<view class="container-one">
+    <!-- <canvas type="2d" id="myCanvasOne" style="width: 654rpx;height: 904rpx;"></canvas> -->
+    <!-- <canvas canvas-id="canvasOne" id="canvasOne"></canvas> -->
+    <view class="title-wrapper" style="top:{{navBarHeight}}px">数据</view>
+    <view class="bg-wrapper">
+        <view class="calendar">
+            <view class="header">
+                <image src="http://8.130.36.192/wxapp/date_left.svg" bindtap="prevMonth" />
+                <view>{{year}}.{{month}}</view>
+                <image src="http://8.130.36.192/wxapp/date_right.svg" bindtap="nextMonth" />
+            </view>
+            <view class="weekdays">
+                <block wx:for="{{weekDays}}" wx:key="index">
+                    <view>{{item}}</view>
+                </block>
+            </view>
+            <view class="dates">
+                <block wx:for="{{daysArray}}" wx:key="index">
+                    <view class="day {{item.status}}" data-date="{{item.date}}" bindtap="selectDay" style="color: {{item.disabled ? '#ccc' : 'black'}};">
+                        {{item.day}}
+                        <view wx:if="{{item.isCurrentDay}}" class="current-day-icon"></view>
+                    </view>
+                </block>
+            </view>
+            <view class="tips-wrapper">
+                <view class="one-wrapper">
+                    <view></view>
+                    <view>未学习</view>
+                </view>
+                <view class="two-wrapper">
+                    <view></view>
+                    <view>背词100以下</view>
+                </view>
+                <view class="three-wrapper">
+                    <view></view>
+                    <view>背词100以上</view>
+                </view>
+            </view>
+            <view class="icon-wrapper">
+                <view class="left-box"></view>
+                <view class="center-line"></view>
+                <view class="right-box"></view>
+            </view>
+            <view class="date-title-wrapper">
+                <view>02月08日</view>
+                <share-one></share-one>
+            </view>
+            <view class="date-statistics-wrapper">
+                <view class="common-wrapper">
+                    <view>685</view>
+                    <view>新学生词</view>
+                </view>
+                <view class="common-wrapper">
+                    <view>45</view>
+                    <view>复习单词</view>
+                </view>
+                <view class="common-wrapper new-common">
+                    <view>
+                        <text>439</text>
+                        <text>m</text>
+                    </view>
+                    <view>当日累计学习时间</view>
+                </view>
+            </view>
+        </view>
+        <view class="result-title-wrapper">
+            <view class="result-title">
+                <image class="share-btn" src="http://8.130.36.192/wxapp/study_result.svg" />
+                <text>数据统计</text>
+            </view>
+             <share-two></share-two>
+        </view>
+        <view class="date-all-wrapper">
+            <view class="left-box">
+                <view>2763</view>
+                <view>总共背词天数</view>
+            </view>
+            <view class="line"></view>
+            <view class="right-box">
+                <view>
+                    <text>439</text>
+                    <text>m</text>
+                </view>
+                <view>平均背词时间</view>
+            </view>
+        </view>
+    </view>
+</view>

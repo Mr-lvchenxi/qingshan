@@ -1,0 +1,16 @@
+{
+  "name": "miniprogram-ts-less-quickstart",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "@vant/weapp": "^1.11.6",
+    "mp-progress": "^1.2.14"
+  },
+  "devDependencies": {
+    "miniprogram-api-typings": "^2.12.0"
+  }
+}

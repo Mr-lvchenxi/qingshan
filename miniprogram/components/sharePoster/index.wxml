@@ -1,0 +1,4 @@
+<view class="share-btn {{ collapsed ? 'collapsed' : '' }}" bind:tap="handleShare">
+  <image class="icon" src="https://m.xiwang.com/resource/__private__/bddb296cbe0207af0bae83ca0706baf4/patriarch-end-miniapp/share-icon.png" />
+  <text>分享成就</text>
+</view>

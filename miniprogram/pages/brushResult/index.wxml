@@ -1,0 +1,23 @@
+<view class="container-one">
+    <view class="title-wrapper" style="top:{{navBarHeight}}px">
+        <image src="http://8.130.36.192/wxapp/back.svg" bindtap="handleGoBack" />
+        刷词总结
+    </view>
+    <view class="bg-wrapper">
+        <view class="top-wrapper">
+            <view class="title">非常棒！完成刷词</view>
+            <view class="word-num-wrapper">
+                <view>200</view>
+                <view>词</view>
+            </view>
+            <view class="time-all">
+                <image src="" />
+                <view>在 2min 内完成刷词</view>    
+            </view>
+              
+        </view>
+        <view class="desc-text">把你的进步跟好友分享一下吧！</view>
+        <cx-sharePoster></cx-sharePoster>
+        <view class="go-one" bindtap="handleGoOne">跳过</view>
+    </view>
+</view>
